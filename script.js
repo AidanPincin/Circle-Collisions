@@ -18,6 +18,10 @@ class Circle{
         if (this.y<=0+this.r || this.y>=800-this.r){
             this.ys *= -1
         }
+        if (this.x<=300+this.r){this.x += this.xs}
+        if (this.y<=0+this.r){this.y += this.ys}
+        if (this.x>=1100-this.r){this.x += this.xs}
+        if (this.y>=800-this.r){this.y += this.ys}
         ctx.fillStyle = this.c
         ctx.beginPath()
         ctx.arc(this.x,this.y,this.r,0,Math.PI*2,false)
